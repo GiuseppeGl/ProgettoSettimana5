@@ -1,0 +1,52 @@
+@import 'override';
+
+body {
+
+    background: rgba(20,20,20,255);
+}
+
+#logo{
+
+    width: 80px;
+    height: 40px;
+}
+
+.nav-item {
+
+
+    list-style: none;
+       a {
+        
+
+        .navRightImg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+.navRightImg{
+    width: 30px;
+    height: 30px;
+
+}
+
+#searchIcon {
+
+    cursor: pointer;
+}
+
+footer {
+   p {
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 0.4em;
+   }
+
+    i {
+        margin-right: 0.5em;
+      font-size: 1em; 
+    }
+  }
