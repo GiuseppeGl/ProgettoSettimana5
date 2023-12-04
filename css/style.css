@@ -11889,4 +11889,9 @@ footer p {
 footer i {
   margin-right: 0.5em;
   font-size: 1em;
+}
+
+/* PAGINA 2 */
+#ombra {
+  box-shadow: inset 0 50px 40px -10px rgba(0, 0, 0, 0.8); /* Stile dell'ombra interna */
 }/*# sourceMappingURL=style.css.map */
