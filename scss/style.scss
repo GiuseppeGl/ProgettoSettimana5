@@ -1,4 +1,7 @@
 @import 'override';
+@import 'mixin';
+
+
 
 body {
 
@@ -7,8 +10,9 @@ body {
 
 #logo{
 
-    width: 80px;
-    height: 40px;
+    width: 90px;
+    height: 50px;
+    margin-left: -10px;
 }
 
 .nav-item {
@@ -42,7 +46,7 @@ footer {
 
     margin-top: 1em;
     margin-bottom: 1em;
-    font-size: 0.4em;
+    @include paramMixin(0.4em, normal);
    }
 
     i {
@@ -61,4 +65,31 @@ footer {
 }
 
 
-  
+// prove nuove fs
+
+$fontSizes: (
+    1: 2rem,
+    2: 1.8rem,
+    3: 1.6rem,
+    4: 1.4rem,
+    5: 1.2rem,
+    6: 1rem
+  );
+
+  $newFontSizes: ();
+
+@for $i from 7 through 12 {
+  $newKey: $i;
+  $baseSize: map-get($fontSizes, 6); //  valore di base da Bootstrap 
+  $decrement: (7 - $i) * -0.1rem; // incremento negativo 
+  $newValue: $baseSize - $decrement;
+  $newFontSizes: map-merge($newFontSizes, ($newKey: $newValue));
+}
+
+// Output dei valori delle nuove dimensioni dei font
+@each $key, $value in $newFontSizes {
+  .fs-#{$key} {
+    font-size: $value;
+  }
+}
+

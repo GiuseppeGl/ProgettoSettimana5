@@ -1,0 +1,5 @@
+
+@mixin paramMixin($primaryFont, $weight) {
+    font-weight: $weight;
+    font-size: $primaryFont;
+  }
